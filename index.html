@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stream 'Netherworld by Ekene Talks on Spotify, Apple Music, YouTube Music, Amazon Music, Audiomack, Tidal, Boomplay and more. Dark occult metal descent into forbidden ecstasy.">
+    <meta name="keywords" content="I'm The Dark Emperor, Netherworld, Ekene Talks, dark metal, occult music, netherworld, forbidden pleasure, stream music, Spotify, Apple Music, YouTube Music, Amazon Music, Audiomack, Tidal, Boomplay">
+    <link rel="icon" href="./nethercover.jpg" type="image/jpeg">
+    <title>Netherworld - Stream Now | Ekene Talks</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #0a0015, #150033, #22004d);
+            color: #e6d9ff;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3.8em;
+            margin: 0.2em 0;
+            color: #a020f0; /* Vivid purple */
+            text-shadow: 0 0 30px rgba(160, 32, 240, 0.8), 0 0 15px #c41e3a;
+        }
+        .artist {
+            font-size: 1.8em;
+            color: #bb86fc; /* Strong purple accent */
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px #bb86fc80;
+        }
+        .tagline {
+            font-size: 1.3em;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: #d0bfff;
+        }
+        .artwork {
+            width: 70%;
+            max-width: 420px;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 0 60px rgba(160, 32, 240, 0.7), 0 0 20px #8b0015;
+            margin-bottom: 50px;
+            border: 4px solid #7b1fa2; /* Deeper purple border */
+            object-fit: cover;
+        }
+        .platforms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            margin: 0 20px 60px;
+        }
+        .platform-card {
+            background: rgba(30, 15, 50, 0.8);
+            border: 2px solid #7b1fa2;
+            border-radius: 16px;
+            padding: 25px;
+            transition: all 0.35s ease;
+            backdrop-filter: blur(8px);
+        }
+        .platform-card:hover {
+            transform: translateY(-12px) scale(1.04);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+            border-color: #a020f0;
+        }
+        .platform-card img {
+            width: 90px;
+            height: 90px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #a020f0, #7b1fa2, #6a1b9a);
+            color: white;
+            padding: 14px 32px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            box-shadow: 0 0 15px rgba(160, 32, 240, 0.5);
+        }
+        .btn:hover {
+            background: linear-gradient(135deg, #c300ff, #a020f0, #bb86fc);
+            transform: scale(1.06);
+            box-shadow: 0 0 25px #c300ff80;
+        }
+        .lyrics-section {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            text-align: left;
+            background: rgba(20, 10, 40, 0.7);
+            padding: 35px;
+            border-radius: 12px;
+            border: 2px solid #7b1fa2;
+        }
+        .lyrics-section h2 {
+            color: #bb86fc;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 0 0 15px #bb86fc80;
+        }
+        .lyrics {
+            white-space: pre-wrap;
+            line-height: 1.8;
+            font-size: 1.15em;
+            color: #e0d0ff;
+        }
+        .repetition {
+            color: #c300ff;
+            font-weight: bold;
+            text-shadow: 0 0 8px #c300ff60;
+        }
+        footer {
+            margin-top: 80px;
+            padding: 30px;
+            font-size: 0.95em;
+            color: #aaa;
+            border-top: 1px solid #7b1fa2;
+        }
+
+
+        
+
+        /* ── Fixed Jump to Lyrics Button ── */
+        .jump-to-lyrics {
+            position: fixed;
+            top: 50px;
+            right: 100px;
+            z-index: 1000;
+            background: linear-gradient(135deg, #a020f0, #7b1fa2);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1em;
+            box-shadow: 0 0 15px rgba(160, 32, 240, 0.6);
+            transition: all 0.3s ease;
+        }
+
+        .jump-to-lyrics:hover {
+            background: linear-gradient(135deg, #c300ff, #a020f0);
+            transform: translateY(-3px);
+            box-shadow: 0 0 25px rgba(195, 0, 255, 0.8);
+        }
+
+        /* Social Handles Section */
+        .social-handles {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 25px 0 50px;
+        }
+        .social-handles a {
+            display: inline-block;
+            transition: transform 0.3s, filter 0.3s;
+        }
+        .social-handles a:hover {
+            transform: scale(1.15);
+        }
+        .social-handles img {
+            width: 38px;
+            height: 38px;
+            filter: drop-shadow(0 0 8px rgba(160, 32, 240, 0.6));
+        }
+        .social-handles img:hover {
+            filter: drop-shadow(0 0 12px #c300ff);
+        }
+
+        @media (max-width: 700px) {
+            h1 { font-size: 2.8em; }
+            .platforms { grid-template-columns: 1fr; }
+            .artwork { width: 90%; }
+            .jump-to-lyrics {
+                font-size: 0.9em;
+                padding: 10px 16px;
+                top: 15px;
+                right: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Jump to Lyrics link -->
+    <a href="#lyrics-section" class="jump-to-lyrics">Lyrics ↓</a>
+
+    <div class="container">
+        <h1>Netherworld</h1>
+        <div class="artist">Ekene Talks</div>
+        <p class="tagline">A merciless plunge into forbidden ecstasy and willing damnation.<br>
+        The Netherworld calls — answer with no regrets.</p>
+
+        <!-- Your local artwork (adjust path if needed) -->
+        <img src="./nethercover.jpg" 
+             alt="Netherworld Official Artwork by Ekene Talks" class="artwork">
+
+        <p>Stream the track now on your favorite platform:</p>
+
+        <div class="platforms">
+
+            <!-- Spotify -->
+            <div class="platform-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" alt="Spotify">
+                <h3>Spotify</h3>
+                <a href="https://open.spotify.com/track/2rQKkKT5kTTdMXbbPo65dX" target="_blank" class="btn">Listen on Spotify</a>
+            </div>
+
+            <!-- YouTube Music -->
+            <div class="platform-card">
+                <img src="https://music.youtube.com/img/on_platform_logo_dark.svg" alt="YouTube Music">
+                <h3>YouTube Music</h3>
+                <a href="https://youtu.be/_nethercover.jpgT29PyN9oNsqcmKn" target="_blank" class="btn">Listen on YouTube Music</a>
+            </div>
+
+            <!-- Amazon Music -->
+            <div class="platform-card">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/019/136/319/small/amazon-logo-amazon-icon-free-free-vector.jpg" alt="Amazon Music">
+                <h3>Amazon Music</h3>
+                <a href="https://music.amazon.com.mx/artists/B0GFGHX7WR/ekene-talks?marketplaceId=A1AM78C64UM0Y8&nethercover.jpgmusicTerritory=MX&ref=dm_sh_2nei8hxQapeoOMWqGjjUYyZa7" 
+                   target="_blank" class="btn">Listen on Amazon Music</a>
+            </div>
+
+            <!-- Audiomack -->
+            <div class="platform-card">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/audiomack-icon.png" alt="Audiomack">
+                <h3>Audiomack</h3>
+                <a href="https://audiomack.com/ekene-talks/song/netherworld" target="_blank" class="btn">Listen on Audiomack</a>
+            </div>
+
+            <!-- Apple Music -->
+            <div class="platform-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Apple_Music_icon.svg" alt="Apple Music">
+                <h3>Apple Music</h3>
+                <a href="https://music.apple.com/ng/song/netherworld/1867148243" target="_blank" class="btn">Listen on Apple Music</a>
+            </div>
+
+            <!-- Tidal -->
+            <div class="platform-card">
+                <img src="https://tidal.com/_nuxt/img/logos.25178fd.jpg" alt="Tidal">
+                <h3>Tidal</h3>
+                <a href="https://tidal.com/track/487604276" target="_blank" class="btn">Listen on Tidal</a>
+            </div>
+
+            <!-- Boomplay -->
+            <div class="platform-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-vJoRnIyFu1FNnkiP635o0vaMcu0b34-Swg&s" alt="Boomplay">
+                <h3>Boomplay</h3>
+                <a href="https://www.boomplay.com/songs/231625040?srModel=COPYLINK&srList=WEB&share_content=music&share_channel=copylink&share_platform=web" target="_blank" class="btn">Listen on Boomplay</a>
+            </div>
+
+        </div>
+
+        <!-- Lyrics Section -->
+        <div class="lyrics-section" id="lyrics-section">
+            <h2>Lyrics – Netherworld</h2>
+            <div class="lyrics">
+I'm The Dark Emperor
+Shak naka
+Don't tell me this
+Don't tell me that
+I know the truth
+I'm closer to my doom
+
+Netherworld is calling
+This pleasure I feel
+I won't let it go
+
+Nectar I suck from this nether region 💦
+Next to twin tower I'll take dominion
+Kitty face is smiling 😻
+It is mesmerising
+This pleasure we feel, we won't let it go
+
+Tingling sensations, happy mood is on,
+Defend it I will, sanity is gone
+Normal life is boring
+But the devil is cunning 👹
+Actions I am, my words I'll be
+
+<span class="repetition">Netherworld ×11</span>
+Willing victim I've become
+
+<span class="repetition">Netherworld ×9</span>
+Willing victim I've become
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 Ekene Talks Studio • All rights reserved</p>
+            <!-- Social Handles - Added here -->
+            <div class="social-handles">
+                <a href="https://twitter.com/ekenetalks" target="_blank" rel="noopener noreferrer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="X / Twitter">
+                </a>
+                <a href="https://instagram.com/ekenetalks" target="_blank" rel="noopener noreferrer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+                <a href="https://youtube.com/@ekenetalks" target="_blank" rel="noopener noreferrer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube">
+                </a>
+                <a href="https://facebook.com/ekenetalks" target="_blank" rel="noopener noreferrer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                </a>
+                
+                <a href="https://www.tiktok.com/@ekenetalks" target="_blank" rel="noopener noreferrer">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPrcqvwQl-6UBIS--5gEFhhk3c9f7MEJtosw&s" alt="TikTok">
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
